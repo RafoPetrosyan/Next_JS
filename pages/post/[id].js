@@ -1,10 +1,9 @@
 import {useRouter} from "next/router";
 
 export default function Post() {
-    const router = useRouter();
-    console.log(router);
+    const {query: {id}} = useRouter();
 
     return (
-        <h1>Post</h1>
+        <h1>Post {id}</h1>
     )
 }
